@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Atoldiscovery_Customer::customer_preferences" sortOrder="10" title="customer_preferences">
+					<resource id="Atoldiscovery_Customer::customer_preferences_save" sortOrder="10" title="Save customer_preferences"/>
+					<resource id="Atoldiscovery_Customer::customer_preferences_delete" sortOrder="20" title="Delete customer_preferences"/>
+					<resource id="Atoldiscovery_Customer::customer_preferences_update" sortOrder="30" title="Update customer_preferences"/>
+					<resource id="Atoldiscovery_Customer::customer_preferences_view" sortOrder="40" title="View customer_preferences"/>
+				</resource>
+				<resource id="Atoldiscovery_Customer::customer_favorite_facilities" sortOrder="10" title="customer_favorite_facilities">
+					<resource id="Atoldiscovery_Customer::customer_favorite_facilities_save" sortOrder="10" title="Save customer_favorite_facilities"/>
+					<resource id="Atoldiscovery_Customer::customer_favorite_facilities_delete" sortOrder="20" title="Delete customer_favorite_facilities"/>
+					<resource id="Atoldiscovery_Customer::customer_favorite_facilities_update" sortOrder="30" title="Update customer_favorite_facilities"/>
+					<resource id="Atoldiscovery_Customer::customer_favorite_facilities_view" sortOrder="40" title="View customer_favorite_facilities"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

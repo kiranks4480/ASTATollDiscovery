@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route method="POST" url="/V1/atoldiscovery-customer/customer_preferences">
+		<service class="Atoldiscovery\Customer\Api\CustomerPreferencesRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Atoldiscovery_Customer::customer_preferences_save"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/atoldiscovery-customer/customer_preferences/search">
+		<service class="Atoldiscovery\Customer\Api\CustomerPreferencesRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Atoldiscovery_Customer::customer_preferences_view"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/atoldiscovery-customer/customer_preferences/:preferencesId">
+		<service class="Atoldiscovery\Customer\Api\CustomerPreferencesRepositoryInterface" method="getById"/>
+		<resources>
+			<resource ref="Atoldiscovery_Customer::customer_preferences_view"/>
+		</resources>
+	</route>
+	<route method="PUT" url="/V1/atoldiscovery-customer/customer_preferences/:preferencesId">
+		<service class="Atoldiscovery\Customer\Api\CustomerPreferencesRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Atoldiscovery_Customer::customer_preferences_update"/>
+		</resources>
+	</route>
+	<route method="DELETE" url="/V1/atoldiscovery-customer/customer_preferences/:preferencesId">
+		<service class="Atoldiscovery\Customer\Api\CustomerPreferencesRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Atoldiscovery_Customer::customer_preferences_delete"/>
+		</resources>
+	</route>
+	<route method="POST" url="/V1/atoldiscovery-customer/customer_favorite_facilities">
+		<service class="Atoldiscovery\Customer\Api\CustomerFavoriteFacilitiesRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Atoldiscovery_Customer::customer_favorite_facilities_save"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/atoldiscovery-customer/customer_favorite_facilities/search">
+		<service class="Atoldiscovery\Customer\Api\CustomerFavoriteFacilitiesRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Atoldiscovery_Customer::customer_favorite_facilities_view"/>
+		</resources>
+	</route>
+	<route method="GET" url="/V1/atoldiscovery-customer/customer_favorite_facilities/:facilitiesId">
+		<service class="Atoldiscovery\Customer\Api\CustomerFavoriteFacilitiesRepositoryInterface" method="getById"/>
+		<resources>
+			<resource ref="Atoldiscovery_Customer::customer_favorite_facilities_view"/>
+		</resources>
+	</route>
+	<route method="PUT" url="/V1/atoldiscovery-customer/customer_favorite_facilities/:facilitiesId">
+		<service class="Atoldiscovery\Customer\Api\CustomerFavoriteFacilitiesRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Atoldiscovery_Customer::customer_favorite_facilities_update"/>
+		</resources>
+	</route>
+	<route method="DELETE" url="/V1/atoldiscovery-customer/customer_favorite_facilities/:facilitiesId">
+		<service class="Atoldiscovery\Customer\Api\CustomerFavoriteFacilitiesRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Atoldiscovery_Customer::customer_favorite_facilities_delete"/>
+		</resources>
+	</route>
+</routes>

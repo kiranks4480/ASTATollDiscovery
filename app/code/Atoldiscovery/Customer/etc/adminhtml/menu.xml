@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Atoldiscovery_Customer::customer_preference" module="Atoldiscovery_Customer" parent="Magento_Customer::customer" resource="Magento_Backend::content" sortOrder="60" title="Customer Preferences"/>
+		<add action="customer/customerpreferences/index" id="Atoldiscovery_Customer::customer_preferences" module="Atoldiscovery_Customer" parent="Atoldiscovery_Customer::customer_preference" resource="Magento_Backend::content" sortOrder="20" title="Customer Preferences"/>
+		<add action="customer/customerfavoritefacilities/index" id="Atoldiscovery_Customer::customer_favorite_facilities" module="Atoldiscovery_Customer" parent="Atoldiscovery_Customer::customer_preference" resource="Magento_Backend::content" sortOrder="10" title="Customer Favorite Facilities"/>
+
+	</menu>
+</config>

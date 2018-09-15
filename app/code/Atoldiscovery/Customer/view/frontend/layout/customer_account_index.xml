@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+   <body>
+
+      <referenceContainer name="content">
+         <block class="Magento\Customer\Block\Account\Dashboard\Info" name="customer_account_dashboard_info" as="info" template="Atoldiscovery_Customer::account/dashboard/info.phtml" cacheable="false"/>
+         <block class="Magento\Customer\Block\Account\Dashboard\Address" name="customer_account_dashboard_address" as="address" template="Atoldiscovery_Customer::account/dashboard/address.phtml" cacheable="false"/>
+      </referenceContainer>
+
+      <referenceContainer name="content">
+         <block class="Atoldiscovery\Customer\Block\Account\Avatar"
+                name="customer_account_avatar"
+                as="customer.account.avatar"
+                before="customer_account_dashboard_info"
+                template="account/dashboard/avatar.phtml"  />
+      </referenceContainer>
+   </body>
+</page>

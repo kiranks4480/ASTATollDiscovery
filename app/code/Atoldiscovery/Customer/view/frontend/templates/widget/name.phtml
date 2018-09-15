@@ -1,0 +1,64 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Atoldiscovery\Customer\Block\Widget\Name $block */
+
+/*
+<?= $block->getLayout()->createBlock('Atoldiscovery\Customer\Block\Widget\Name')
+   ->setObject($block->getAddress())
+   ->toHtml() ?>
+
+For checkout/onepage/shipping.phtml:
+
+<?= $block->getLayout()->createBlock('Atoldiscovery\Customer\Block\Widget\Name')
+   ->setObject($block->getAddress())
+   ->setFieldIdFormat('shipping:%s')
+   ->setFieldNameFormat('shipping[%s]')
+   ->toHtml() ?>
+*/
+
+$prefix = $block->showPrefix();
+$middle = $block->showMiddlename();
+$suffix = $block->showSuffix();
+?>
+
+<div class="field required fullname <?= $block->escapeHtmlAttr($block->getContainerClassName()) ?>">
+    <label for="<?= $block->escapeHtmlAttr($block->getFieldId('firstname')) ?>" class="label">
+        <span><?= $block->escapeHtml(__('Name')) ?></span>
+    </label>
+    <div class="control">
+        <fieldset class="fieldset fieldset-fullname">
+            <div class="field field-name-firstname required">
+                <label class="label" for="<?= $block->escapeHtmlAttr($block->getFieldId('firstname')) ?>">
+                    <span><?= $block->escapeHtml($block->getStoreLabel('firstname')) ?></span>
+                </label>
+
+                <div class="control">
+                    <input type="text" id="<?= $block->escapeHtmlAttr($block->getFieldId('firstname')) ?>"
+                           name="<?= $block->escapeHtmlAttr($block->getFieldName('firstname')) ?>"
+                           value="<?= $block->escapeHtmlAttr($block->getObject()->getFirstname()) ?>"
+                           title="<?= $block->escapeHtmlAttr($block->getStoreLabel('firstname')) ?>"
+                           class="input-text <?= $block->escapeHtmlAttr($block->getAttributeValidationClass('firstname')) ?>" <?php if ($block->getAttributeValidationClass('firstname') == 'required-entry') echo ' data-validate="{required:true}"' ?>>
+                </div>
+            </div>
+            <div class="field field-name-lastname required">
+                <label class="label" for="<?= $block->escapeHtmlAttr($block->getFieldId('lastname')) ?>">
+                    <span><?= $block->escapeHtml($block->getStoreLabel('lastname')) ?></span>
+                </label>
+                <div class="control">
+                    <input type="text" id="<?= $block->escapeHtmlAttr($block->getFieldId('lastname')) ?>"
+                       name="<?= $block->escapeHtmlAttr($block->getFieldName('lastname')) ?>"
+                       value="<?= $block->escapeHtmlAttr($block->getObject()->getLastname()) ?>"
+                       title="<?= $block->escapeHtmlAttr($block->getStoreLabel('lastname')) ?>"
+                       class="input-text <?= $block->escapeHtmlAttr($block->getAttributeValidationClass('lastname')) ?>" <?php if ($block->getAttributeValidationClass('lastname') == 'required-entry') echo ' data-validate="{required:true}"' ?>>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+

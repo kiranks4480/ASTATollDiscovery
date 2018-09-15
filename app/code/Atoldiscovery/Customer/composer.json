@@ -1,0 +1,26 @@
+{
+    "name": "Atoldiscovery/module-customer",
+    "description": "",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "info@mage2gen.com",
+            "name": "Mage2Gen"
+        },
+        {
+            "email": "s.ravindra153@gmail.com",
+            "name": "Ravindra Sunkavalli"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Atoldiscovery\\Customer\\": ""
+        }
+    }
+}
